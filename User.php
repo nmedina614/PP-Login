@@ -8,8 +8,8 @@
 
 class User {
 
-    private $username;
-    private $password;
+    protected $username;
+    protected $password;
     private $loggedIn;
 
     /**
