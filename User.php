@@ -13,10 +13,10 @@ class User {
     private $loggedIn;
 
     /**
-     * User constructor.
-     * @param string $username
-     * @param string $password
-     * @param string $loggedIn
+     * Default Constructor for User
+     * @param string $username - username of user
+     * @param string $password - password of user
+     * @param string $loggedIn - Logged In status
      */
     function __construct($username="", $password="", $loggedIn="false") {
         $this->username = $username;
@@ -24,14 +24,28 @@ class User {
         $this->loggedIn = $loggedIn;
     }
 
+
+    /**
+     * Gets the username and returns it
+     * @return mixed - username of user
+     */
     function getUser() {
         return $username;
     }
 
+
+    /**
+     * Sets the Username
+     * @param $username - username of user
+     */
     function setUser($username) {
         $this->username = $username;
     }
 
+    /**
+     * Sets Password for user that must be 6 char long at least
+     * @param $password - Password for user
+     */
     function setPassword($password) {
         if (strlen($password) > 5) {
             $this->password = $password;
@@ -40,6 +54,12 @@ class User {
         }
     }
 
+
+    /**
+     * Attempts to login for the user.
+     * @param $username - Username for user
+     * @param $password - Password for user
+     */
     function login($username, $password) {
         include ('users.php');
         if ($loginInfos[$username] == $password) {
@@ -50,6 +70,10 @@ class User {
         }
     }
 
+
+    /**
+     * Log outs for the user.
+     */
     function logout() {
         $this->username = "";
         $this->password = "";
