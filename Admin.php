@@ -24,6 +24,8 @@ class Admin extends User {
         return $this->accessLevel;
     }
 
-
+    function editUser($user){
+        echo "editing ".$user->getUser();
+    }
 
 }
