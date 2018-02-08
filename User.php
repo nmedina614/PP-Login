@@ -30,7 +30,7 @@ class User {
      * @return mixed - username of user
      */
     function getUser() {
-        return $username;
+        return $this->username;
     }
 
 

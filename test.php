@@ -6,10 +6,12 @@
  * Time: 10:29 AM
  */
 
-
+    include ('User.php');
 
     $user1 = new User('george', '123456');
     $user2 = new User('Albert', '654321');
 
+
     $user1->login();
+
     $user2->login();
