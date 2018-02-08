@@ -15,5 +15,15 @@ class Admin extends User {
         $this->password = $password;
         $this->accessLevel = $accessLevel;
     }
-    
+
+    function setAccess($accessLevel){
+        $this->accessLevel = $accessLevel;
+    }
+
+    function getAccess(){
+        return $this->accessLevel;
+    }
+
+
+
 }
