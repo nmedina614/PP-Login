@@ -57,13 +57,11 @@ class User {
 
     /**
      * Attempts to login for the user.
-     * @param $username - Username for user
-     * @param $password - Password for user
      */
-    function login($username, $password) {
+    function login() {
         include ('users.php');
-        if ($loginInfos[$username] == $password) {
-            echo "$username is logged in";
+        if ($loginInfos[$this->username] == $this->password) {
+            echo "$this->username is logged in";
             $this->loggedIn = true;
         } else {
             echo "Login error";
